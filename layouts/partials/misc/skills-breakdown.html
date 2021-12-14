@@ -38,9 +38,9 @@
                                     {{ if isset . "progressClass" }}
                                         {{ $progressClass = .progressClass }}
                                     {{ else }}
-                                        {{ if le .progress 30 }}
+                                        {{ if lt .progress 30 }}
                                             {{ $progressClass = "bg-danger" }}
-                                        {{ else if le .progress 75 }}
+                                        {{ else if lt .progress 75 }}
                                             {{ $progressClass = "bg-warning" }}
                                         {{ else }}
                                             {{ $progressClass = "bg-success" }}

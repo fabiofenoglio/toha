@@ -50,6 +50,7 @@
 .skills-section .skill-card-icons {
   text-align: left;
   padding-top: 0.25em;
+  padding-bottom: 0.25rem;
 }
 
 .skills-section .skill-card-icons img {
