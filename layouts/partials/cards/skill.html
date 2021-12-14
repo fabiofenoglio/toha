@@ -29,7 +29,7 @@
         
         {{ if or .popup .icons }}
         <div class="row skill-card-bottom-row">
-          <div class="col-12 col-md-8 skill-card-icons">
+          <div class="col-12 col-md-8 skill-card-icons d-none d-md-block">
             {{ if .icons }}
               {{ range $icon := .icons }}
                 {{ $iconImage := "" }}
