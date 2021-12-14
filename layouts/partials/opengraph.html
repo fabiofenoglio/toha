@@ -8,5 +8,8 @@
 <meta property="og:title" content="{{ $title }}"/>
 <meta property="og:type" content="{{ $type }}"/>
 <meta property="og:description" content="{{ $description }}"/>
-<meta property="og:image" content="{{ $image | absURL }}">
+
+{{ $imageRes := (resources.Get $image).Resize "300x300" }}
+<meta property="og:image" content="{{ $imageRes.RelPermalink }}">
+
 <meta property="og:url" content="{{ $url }}">
