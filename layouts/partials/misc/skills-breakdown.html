@@ -63,6 +63,25 @@
                                         {{ . | markdownify }}
                                     </p>
                                 {{ end }}
+            
+                                {{ with .links }}
+                                    {{ range $link := . }}
+                                        <a class="pl-2" href="{{ $link.url | absURL }}" target="_blank" rel="noopener">
+                                            <small>
+                                            <i class="fas fa-external-link-alt mr-2"></i>
+                                            
+                                            {{ $link.text | markdownify }}
+                                        </small>
+                                        </a>
+                                        {{ with $link.summary }}
+                                            <br/>
+                                            <small class="text-muted pl-2">    
+                                                {{ . | markdownify }}
+                                            </small>
+                                        {{ end }}
+                                        <br/>
+                                    {{ end }}
+                                {{ end }}
                             </div>
                             <div class="col-12 col-md-1 text-right skill-panel-indicator-cell">
                                 {{ if $hasChildrenSections }}
