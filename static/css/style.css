@@ -53,13 +53,13 @@
     box-shadow: 0 0 25px black;
     */
     text-shadow: 0 0 6px black;
-    background: radial-gradient(#00000079, transparent 80%);
+    background: radial-gradient(#00000079, transparent 70%);
     display: inline-block;
     width: fit-content;
     padding-left: 1em;
     padding-right: 1em;
-    padding-top: 0.2em;
-    padding-bottom: 0.5em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
 }
 #home .greeting-subtitle {
     /*
@@ -84,11 +84,11 @@
     box-shadow: 0 0 25px black;
     */
     text-shadow: 0 0 6px black;
-    background: radial-gradient(#00000079, transparent 90%);
+    background: radial-gradient(#00000079, transparent 80%);
     display: inline-block;
     width: fit-content;
     padding-left: 1em;
     padding-right: 1em;
-    padding-top: 0.5em;
+    padding-top: 0.2em;
     padding-bottom: 0.2em;
 }

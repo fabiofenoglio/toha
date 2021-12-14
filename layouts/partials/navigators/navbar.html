@@ -115,7 +115,19 @@
         {{ end }}
         {{ range $customMenus }}
           <li class="nav-item">
-            <a class="nav-link" href="{{ .url }}">{{ .name }}</a>
+            <a class="nav-link" href="{{ .url }}" target="_blank">
+              {{ if .icon }}
+                {{ $image := "" }}
+                {{ $image = resources.Get .icon }}
+                {{ if ne $image.MediaType.SubType "svg" }}
+                    {{ $image = $image.Fit "24x24" }}
+                {{ end }}
+                <img class="" src="{{ $image.RelPermalink }}" />
+              {{ end }}
+              {{ with .name }}
+                {{ . }}
+              {{ end }}
+            </a>
           </li>
         {{ end }}
         {{ if .IsTranslated }}
